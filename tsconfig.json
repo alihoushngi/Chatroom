@@ -24,6 +24,7 @@
 			"@redux/*": ["src/redux/*"],
 			"@utils/*": ["src/utils/*"],
 			"@type/*": ["src/types/*"],
+			"@images/*": ["public/static/images/*"],
 
 			"@containers/*": ["src/containers/*"]
 		}

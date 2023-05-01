@@ -24,6 +24,7 @@ const nextConfig = {
 			"@redux": join(__dirname, "./src/redux"),
 			"@utils": join(__dirname, "./src/utils"),
 			"@type": join(__dirname, "./src/types"),
+			"@images": join(__dirname, "./public/static/images"),
 		};
 
 		return config;
