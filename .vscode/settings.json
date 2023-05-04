@@ -1,0 +1,48 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": true,
+  "colorize.exclude": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/.git",
+    "**/node_modules",
+    "**/bower_components",
+    "**/tmp",
+    "**/dist",
+    "**/tests"
+  ],
+  "colorize.include": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "**/*.styl",
+    "**/*.js",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "colorize.languages": [
+    "javascript",
+    "typeScript",
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg",
+    "html",
+    "html5",
+    "NextJS",
+    "React"
+  ],
+  "editor.language.colorizedBracketPairs": [],
+  "colorize.colorized_variables": ["CSS", "SASS"],
+  "cSpell.words": ["Houshangi"]
+}
