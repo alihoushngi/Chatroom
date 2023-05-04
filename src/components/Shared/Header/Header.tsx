@@ -9,7 +9,7 @@ import {
 } from "./StyledHeader";
 import Image from "next/image";
 import avatar from "@images/avatar.jpeg";
-import logo from "@images/logo.png";
+import logo from "@images/Logo.png";
 
 const Header = () => {
   return (

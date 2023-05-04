@@ -2,7 +2,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  ${tw` flex h-fit w-[60%] min-h-[60px] justify-between p-2 items-center`}
+  ${tw` flex h-fit min-h-[60px] justify-between p-2 items-center`}
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
