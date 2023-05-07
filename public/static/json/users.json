@@ -1,0 +1,38 @@
+{
+  "user1": {
+    "name": "alireza",
+    "family": "alinejad",
+    "age": 23,
+    "phoneNumber": "09115036714",
+    "gender": "male",
+    "city": "Rasht",
+    "status": "online"
+  },
+  "user2": {
+    "name": "mohammad javad",
+    "family": "kamalipour",
+    "age": 21,
+    "phoneNumber": "09027165900",
+    "gender": "male",
+    "city": "Rasht",
+    "status": "offline"
+  },
+  "user3": {
+    "name": "aida",
+    "family": "hashemi",
+    "age": 21,
+    "phoneNumber": "09140054507",
+    "gender": "female",
+    "city": "Ardebil",
+    "status": "online"
+  },
+  "user4": {
+    "name": "ali",
+    "family": "houshangi",
+    "age": 23,
+    "phoneNumber": "09039539334",
+    "gender": "male",
+    "city": "Rasht",
+    "status": "online"
+  }
+}
