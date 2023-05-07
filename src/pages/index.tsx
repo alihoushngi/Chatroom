@@ -8,10 +8,10 @@ export default function Home() {
     <main>
       <Container>
         <Header />
-        <main>
+        <section className="mainSection">
           <SideBar />
           <Main />
-        </main>
+        </section>
       </Container>
     </main>
   );

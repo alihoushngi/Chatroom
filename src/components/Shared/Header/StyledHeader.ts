@@ -16,7 +16,6 @@ export const StyledProfile = styled.div`
   img {
     width: 50px;
     height: 50px;
-    border: 2px solid #4ab2f6;
     border-radius: 100%;
   }
 `;
