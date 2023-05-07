@@ -4,6 +4,6 @@ export interface UserCardTypes {
   ImageHeight?: number;
   ImageWidth?: number;
   UserName: string;
-  UserNumber: string;
+  UserEmail: string;
   isOnline?: boolean;
 }

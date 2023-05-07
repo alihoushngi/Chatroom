@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const StyledUserCard = styled.div`
-  ${tw`border-b-[1px] border-solid p-1.5 m-1.5 flex items-center gap-2.5`}
+  ${tw`border-b-[1px] border-solid border-gray-700 p-5 flex items-center gap-2.5 hover:bg-gray-800 transition-all`}
 `;
 
 export const StyledImageWrappers = styled.div`
@@ -30,6 +30,6 @@ export const StyledUserName = styled.div`
   ${tw`text-[12px] text-smokeWhite`}
 `;
 
-export const StyledUserNumber = styled.span`
-  ${tw`text-[12px] text-gray-400`}
+export const StyledUserEmail = styled.span`
+  ${tw`text-[10px] text-gray-400`}
 `;

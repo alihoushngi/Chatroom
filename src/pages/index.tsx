@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <main>
       <Container>
-        <Header />
         <section className="mainSection">
           <SideBar />
           <Main />

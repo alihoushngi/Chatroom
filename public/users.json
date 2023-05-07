@@ -5,7 +5,8 @@
     "phoneNumber": "09115036714",
     "gender": "male",
     "city": "Rasht",
-    "status": true
+    "status": true,
+    "userEmail": "alireza@alinejad.com"
   },
   {
     "name": "mohammad javad kamalipour",
@@ -13,7 +14,8 @@
     "phoneNumber": "09027165900",
     "gender": "male",
     "city": "Rasht",
-    "status": false
+    "status": false,
+    "userEmail": "mohamad@javad.com"
   },
   {
     "name": "aida hashemi",
@@ -21,7 +23,8 @@
     "phoneNumber": "09140054507",
     "gender": "female",
     "city": "Ardebil",
-    "status": true
+    "status": true,
+    "userEmail": "aida@hashemi.com"
   },
   {
     "name": "ali houshangi",
@@ -29,6 +32,7 @@
     "phoneNumber": "09039539334",
     "gender": "male",
     "city": "Rasht",
-    "status": true
+    "status": true,
+    "userEmail": "blumy.info@gmail.com"
   }
 ]

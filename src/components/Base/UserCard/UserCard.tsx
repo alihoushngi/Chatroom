@@ -4,7 +4,7 @@ import {
   StyledUserCard,
   StyledUserInfoWrapper,
   StyledUserName,
-  StyledUserNumber,
+  StyledUserEmail,
   StyledOnlineUserStatus,
   StyledOfflineUserStatus,
   Images,
@@ -18,7 +18,7 @@ const UserCard = ({
   ImageWidth,
   ImageHeight,
   UserName,
-  UserNumber,
+  UserEmail,
   isOnline = undefined,
 }: UserCardTypes) => {
   return (
@@ -38,7 +38,7 @@ const UserCard = ({
       </StyledImageWrappers>
       <StyledUserInfoWrapper>
         <StyledUserName>{UserName}</StyledUserName>
-        <StyledUserNumber>{UserNumber}</StyledUserNumber>
+        <StyledUserEmail>{UserEmail}</StyledUserEmail>
       </StyledUserInfoWrapper>
     </StyledUserCard>
   );
