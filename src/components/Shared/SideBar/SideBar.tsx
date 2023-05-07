@@ -39,7 +39,7 @@ const SideBar = () => {
               ImageHeight={35}
               UserName={user.name}
               UserNumber={user.phoneNumber}
-              isOnline
+              isOnline={user.status}
             />
           </div>
         );
