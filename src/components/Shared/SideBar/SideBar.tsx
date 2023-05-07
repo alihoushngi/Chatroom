@@ -38,8 +38,6 @@ const SideBar = () => {
     fetchUsers();
   }, []);
 
-  console.log(users);
-
   return (
     <StyledSideBar>
       <StyledProfileInfo>

@@ -19,7 +19,7 @@ export const StyledOnlineUserStatus = styled.div`
 `;
 
 export const StyledOfflineUserStatus = styled.div`
-  ${tw`absolute w-2 h-2 rounded-[100%] right-0 bottom-1 bg-red-600`}
+  ${tw`absolute w-2 h-2 rounded-[100%] right-0 bottom-[1px] bg-red-600`}
 `;
 
 export const StyledUserInfoWrapper = styled.div`
