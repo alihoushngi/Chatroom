@@ -19,6 +19,7 @@ import {
   StyledUserInfoWrapper,
   StyledUserName,
 } from "@base/UserCard/StyledUserCard";
+import SenderMessage from "@base/MessageBox/SenderMessage/SenderMessage";
 
 //types
 interface userState {
@@ -32,6 +33,7 @@ interface userState {
 
 const Main = () => {
   const [users, setUsers] = useState<userState[]>([]);
+  const sender = false;
 
   useEffect(() => {
     async function fetchUsers() {
@@ -67,7 +69,129 @@ const Main = () => {
           <i className="fas fa-ellipsis-v"></i>
         </StyledIconsWrapper>
       </StyledFirstSection>
-      <StyledMainSection></StyledMainSection>
+      <StyledMainSection className={sender ? "sender" : "receiver"}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+          <SenderMessage
+            text="Hi mohammad i'm ali , i want speak with you"
+            sendTime="12:23"
+            alt="mohammad Profile"
+            read={true}
+            sender={sender}
+          />
+        </div>
+      </StyledMainSection>
       <StyledInputWrapper>
         <StyledInput type="text" placeholder="Type your message here..." />
         <StyledButton>SEND</StyledButton>

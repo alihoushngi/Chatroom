@@ -299,3 +299,16 @@ template {
 [hidden] {
   display: none;
 }
+
+.sender {
+  flex-direction: row-reverse !important;
+}
+
+.receiver {
+  flex-direction: row !important;
+}
+
+.left {
+  right: unset !important;
+  left: -9px;
+}
