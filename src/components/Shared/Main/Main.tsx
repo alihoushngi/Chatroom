@@ -13,13 +13,14 @@ import {
   StyledInput,
   StyledButton,
   StyledMainSection,
+  StyledMessagesWrapper,
 } from "./StyledMain";
 import {
   StyledUserEmail,
   StyledUserInfoWrapper,
   StyledUserName,
 } from "@base/UserCard/StyledUserCard";
-import SenderMessage from "@base/MessageBox/SenderMessage/SenderMessage";
+import MessageBox from "@base/MessageBox/MessageBox";
 
 //types
 interface userState {
@@ -29,11 +30,21 @@ interface userState {
   gender: string;
   city: string;
   status: boolean;
+  avatar: string;
+}
+
+interface userChats {
+  sender: boolean;
+  text: string;
+  sendTime: string;
+  read: boolean;
+  avatar?: string;
 }
 
 const Main = () => {
   const [users, setUsers] = useState<userState[]>([]);
-  const sender = false;
+  const [mohammadChats, setMohammadChats] = useState<userChats[]>([]);
+  const [sortedChats, setSortedChats] = useState<userChats[]>([]);
 
   useEffect(() => {
     async function fetchUsers() {
@@ -42,6 +53,20 @@ const Main = () => {
       setUsers(data);
     }
     fetchUsers();
+    async function fetchChats() {
+      const response = await fetch("/mohammadChat.json");
+      const data = await response.json();
+      setMohammadChats(data);
+
+      const sortedChats = data
+        .slice()
+        .sort(
+          (a: userChats, b: userChats) =>
+            new Date(a.sendTime).getTime() - new Date(b.sendTime).getTime()
+        );
+      setSortedChats(sortedChats);
+    }
+    fetchChats();
   }, []);
 
   const isOnline = users[1]?.status;
@@ -51,7 +76,12 @@ const Main = () => {
       <StyledFirstSection>
         <StyledInfoWrapper>
           <StyledImageWrappers>
-            <Images alt="userAvatar" src={Avatar} width={50} height={50} />
+            <Images
+              alt="userAvatar"
+              src={users[1]?.avatar}
+              width={50}
+              height={50}
+            />
             {isOnline ? (
               <StyledOnlineUserStatus></StyledOnlineUserStatus>
             ) : (
@@ -69,128 +99,21 @@ const Main = () => {
           <i className="fas fa-ellipsis-v"></i>
         </StyledIconsWrapper>
       </StyledFirstSection>
-      <StyledMainSection className={sender ? "sender" : "receiver"}>
-        <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-          <SenderMessage
-            text="Hi mohammad i'm ali , i want speak with you"
-            sendTime="12:23"
-            alt="mohammad Profile"
-            read={true}
-            sender={sender}
-          />
-        </div>
+      <StyledMainSection>
+        <StyledMessagesWrapper>
+          {sortedChats.map((data, index) => {
+            return (
+              <MessageBox
+                key={index}
+                profile={data.avatar}
+                sender={data.sender}
+                text={data.text}
+                sendTime={data.sendTime}
+                read={data.read}
+              />
+            );
+          })}
+        </StyledMessagesWrapper>
       </StyledMainSection>
       <StyledInputWrapper>
         <StyledInput type="text" placeholder="Type your message here..." />

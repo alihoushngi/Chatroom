@@ -6,6 +6,10 @@ export const StyledMain = styled.aside`
   ${tw` w-full flex-[4  1  0%] bg-[#171717] border-l border-gray-700 relative`}
 `;
 
+export const StyledMessagesWrapper = styled.div`
+  ${tw`flex flex-col gap-1`}
+`;
+
 export const StyledFirstSection = styled.div`
   ${tw`m-5 pb-4 border-b-[1px] border-gray-700 flex justify-between items-center`}
 `;
@@ -15,7 +19,7 @@ export const StyledImageWrappers = styled.div`
 `;
 
 export const Images = styled(Image)`
-  ${tw``}
+  ${tw`rounded-[100%]`}
 `;
 
 export const StyledOnlineUserStatus = styled.div`
@@ -39,7 +43,7 @@ export const StyledInputWrapper = styled.div`
 `;
 
 export const StyledInput = styled.input`
-  ${tw`bg-transparent text-[12px]  text-smokeWhite h-3.5`}
+  ${tw`bg-transparent text-[12px]  text-smokeWhite h-3.5 min-w-[300px] w-fit `}
   :focus-visible {
     outline: none !important;
     outline-offset: 0 !important;
@@ -54,7 +58,7 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledMainSection = styled.div`
-  ${tw`m-5 pb-4 flex overflow-scroll h-[78vh] `}
+  ${tw`m-5 pb-4 flex overflow-scroll h-[78vh] w-[95%] flex-col`}
   &::-webkit-scrollbar {
     width: 0;
   }

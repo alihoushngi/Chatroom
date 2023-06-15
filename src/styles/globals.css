@@ -310,5 +310,5 @@ template {
 
 .left {
   right: unset !important;
-  left: -9px;
+  left: 2px;
 }

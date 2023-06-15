@@ -7,11 +7,11 @@ export const StyledUserCard = styled.div`
 `;
 
 export const StyledImageWrappers = styled.div`
-  ${tw`relative`}
+  ${tw`relative w-9 h-9`}
 `;
 
 export const Images = styled(Image)`
-  ${tw``}
+  ${tw`rounded-[100%]`}
 `;
 
 export const StyledOnlineUserStatus = styled.div`

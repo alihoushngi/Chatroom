@@ -1,0 +1,54 @@
+[
+  {
+    "text": "hi ali",
+    "sendTime": "2023-05-10T14:00:00+03:30",
+    "read": true,
+    "sender": false,
+    "avatar": "/static/images/kamali.jpg"
+  },
+  {
+    "text": "how are you",
+    "sendTime": "2023-05-10T14:02:00+03:30",
+    "read": true,
+    "sender": false,
+    "avatar": "/static/images/kamali.jpg"
+  },
+  {
+    "text": "thanks",
+    "sendTime": "2023-05-10T14:07:00+03:30",
+    "read": true,
+    "sender": false,
+    "avatar": "/static/images/kamali.jpg"
+  },
+  {
+    "text": "Yes, Sure😍",
+    "sendTime": "2023-05-10T14:10:00+03:30",
+    "read": true,
+    "sender": false,
+    "avatar": "/static/images/kamali.jpg"
+  },
+  {
+    "text": "Hi mohammad i'm ali , i want speak with you",
+    "sendTime": "2023-05-10T13:07:00+03:30",
+    "read": true,
+    "sender": true
+  },
+  {
+    "text": "Im fine , what about you?🤷‍♂️",
+    "sendTime": "2023-05-10T14:05:00+03:30",
+    "read": true,
+    "sender": true
+  },
+  {
+    "text": "I'm really excited about starting a Next.js project with you, specifically focusing on creating a shopping page. I was wondering if you could lend me a hand and share your expertise? Your support would mean a lot to me, and I believe together we can build something awesome!",
+    "sendTime": "2023-05-10T14:08:00+03:30",
+    "read": true,
+    "sender": true
+  },
+  {
+    "text": "Okay, I'll call you back to discuss the project details and set up a meeting time. I'd like to explain more about our Next.js shopping page project. Thank you👍",
+    "sendTime": "2023-05-10T14:25:00+03:30",
+    "read": false,
+    "sender": true
+  }
+]

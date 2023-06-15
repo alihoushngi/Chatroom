@@ -15,6 +15,7 @@ import {
 import UserCard from "@base/UserCard/UserCard";
 import Avatar from "@images/user.png";
 import profileAvatar from "@images/avatar.jpeg";
+import Image from "next/image";
 
 //types
 interface userState {
@@ -24,6 +25,7 @@ interface userState {
   gender: string;
   city: string;
   status: boolean;
+  avatar: string;
 }
 
 const SideBar = () => {
@@ -66,16 +68,15 @@ const SideBar = () => {
         </StyledSearchWrapper>
       </StyledSearchBox>
       {users.map((user, index) => {
+        const { avatar, name, status, userEmail } = user;
         return (
           <div key={index}>
             <UserCard
               ImageAlt="avatar"
-              ImageSrc={Avatar}
-              ImageWidth={35}
-              ImageHeight={35}
-              UserName={user.name}
-              UserEmail={user.userEmail}
-              isOnline={user.status}
+              ImageSrc={avatar}
+              UserName={name}
+              UserEmail={userEmail}
+              isOnline={status}
             />
           </div>
         );

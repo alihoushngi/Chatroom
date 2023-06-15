@@ -10,26 +10,20 @@ import {
   Images,
 } from "./StyledUserCard";
 import { UserCardTypes } from "./TypesUserCard";
-import Image from "next/image";
 
 const UserCard = ({
-  ImageAlt,
+  ImageAlt = "",
   ImageSrc,
   ImageWidth,
   ImageHeight,
   UserName,
   UserEmail,
-  isOnline = undefined,
+  isOnline,
 }: UserCardTypes) => {
   return (
     <StyledUserCard>
       <StyledImageWrappers>
-        <Images
-          alt={ImageAlt}
-          src={ImageSrc}
-          width={ImageWidth}
-          height={ImageHeight}
-        />
+        <Images alt={ImageAlt} src={ImageSrc} width={35} height={35} />
         {isOnline ? (
           <StyledOnlineUserStatus></StyledOnlineUserStatus>
         ) : (
