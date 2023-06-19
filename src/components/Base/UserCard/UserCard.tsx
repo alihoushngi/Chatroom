@@ -14,8 +14,7 @@ import { UserCardTypes } from "./TypesUserCard";
 const UserCard = ({
   ImageAlt = "",
   ImageSrc,
-  ImageWidth,
-  ImageHeight,
+
   UserName,
   UserEmail,
   isOnline,

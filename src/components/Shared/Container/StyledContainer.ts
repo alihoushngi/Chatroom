@@ -2,5 +2,5 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const StyledContainer = styled.div`
-  ${tw`flex flex-col  w-full max-w-[1640px] h-full gap-1`}
+  ${tw`flex flex-col justify-center  w-full max-w-[1640px] h-[100vh] gap-1`}
 `;

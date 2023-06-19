@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import avatar from "../../../../public/static/images/user.png";
 
 import {
   Images,
@@ -13,7 +14,7 @@ import {
   StyledButton,
   StyledMainSection,
   StyledMessagesWrapper,
-} from "../styles/StyledMohammad";
+} from "./StyledMohammadPage";
 
 import {
   StyledUserEmail,
@@ -41,7 +42,7 @@ interface userChats {
   avatar?: string;
 }
 
-const Mohammad = () => {
+const MohammadPage = () => {
   const [users, setUsers] = useState<userState[]>([]);
   const [mohammadChats, setMohammadChats] = useState<userChats[]>([]);
   const [sortedChats, setSortedChats] = useState<userChats[]>([]);
@@ -77,7 +78,7 @@ const Mohammad = () => {
           <StyledImageWrappers>
             <Images
               alt="userAvatar"
-              src={users[1]?.avatar}
+              src={users[1] ? users[1]?.avatar : avatar}
               width={50}
               height={50}
             />
@@ -122,4 +123,4 @@ const Mohammad = () => {
   );
 };
 
-export default Mohammad;
+export default MohammadPage;
